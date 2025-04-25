@@ -21,7 +21,7 @@ rm -rf ./package/Run_Player.onefile-build
 rm -rf ./package/target
 
 # 生成新的秘钥
-python3 encrypt/Fernet_Encrypt.py generate_key
+python3 encrypt/Encrypt.py generate_key
 
 # bundle app, dependencies and data files into single executable
 python3 -m nuitka --lto=no --onefile --standalone --output-dir=package/ --output-filename=${binary_name} Run_Player.py
