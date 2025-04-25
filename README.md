@@ -12,7 +12,15 @@ sudo apt install patchelf
 使用nuitka将python代码转换成cpp代码，然后打包，这种方式需要将pkl和xml等资源文件暴露，所以该框架对这些文件进行了加密处理
 
 ## 温馨提示
-1. `directReadFlag.txt` 文件只存在与项目中，不存在于打包后的目录，如果该文件存在，程序不会对pkl和xml进行解密，如果不存在则会对pkl和xml进行解密
+1. `directReadFlag.txt` 文件只存在与项目中，不存在于打包后的目录，如果该文件存在，程序不会对pkl和xml进行解密，如果不存在则会对pkl和xml进行解密，具体运行机制参考`behaviors/custom/Dribble/Dribble.py`中的读取pkl部分代码
+2. 请把所有的 **pkl文件** 存放在项目根目录下`pkl`文件夹内，然后在动作类中指定pkl路径如`/pkl/r0/dribble_R0.pkl`
+3. 您可以在`package/package.sh`脚本中修改队伍名称(teamname_name)和二进制名称(binary_name)
+4. 生成的二进制文件及其依赖文件位于`package/target`
+5. 根目录下的`libs`文件夹包含了一些共享库，请不要删除它，打包的时候会自动拷贝
+6. 每次打包时脚本会自动更新加密秘钥，加密范围包括pkl文件和xml文件(world/commons/robots部分的xml不会进行加密)
+
+## 感谢
+FCPortugal团队 开源的底层，仓库地址:[https://github.com/m-abr/FCPCodebase](https://github.com/m-abr/FCPCodebase)
 
 # FC Portugal Codebase <br> for RoboCup 3D Soccer Simulation League
 
