@@ -11,6 +11,23 @@ sudo apt install patchelf
 ## 原理
 使用nuitka将python代码转换成cpp代码，然后打包，这种方式需要将pkl和xml等资源文件暴露，所以该框架对这些文件进行了加密处理
 
+## 使用方式
+### 直接在本框架内修改
+> 写就完事了
+### 移植框架内代码到你的项目中去
+1. `behaviors/custom`内的所有通过神经网络构建的动作，您需要按照温馨提示中的第1点和第2点进行修改
+2. `behaviors/Slot_Engine.py`内的修改部分
+3. 在项目根目录创建文件`directReadFlag.txt`
+4. 在项目根目录创建目录`pkl`并把所有神经网络动作的pkl文件放进去
+5. 将本项目根目录的`encrypt`目录及其内部py文件拷贝到你的项目中
+6. 将本项目根目录的`package`目录及其内部py文件拷贝到你的项目中
+7. 将本项目根目录的`libs`目录及其内部py文件拷贝到你的项目中
+### 执行打包脚本
+```bash
+cd package
+./package.sh
+```
+
 ## 温馨提示
 1. `directReadFlag.txt` 文件只存在与项目中，不存在于打包后的目录，如果该文件存在，程序不会对pkl和xml进行解密，如果不存在则会对pkl和xml进行解密，具体运行机制参考`behaviors/custom/Dribble/Dribble.py`中的读取pkl部分代码
 2. 请把所有的 **pkl文件** 存放在项目根目录下`pkl`文件夹内，然后在动作类中指定pkl路径如`/pkl/r0/dribble_R0.pkl`
