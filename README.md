@@ -37,8 +37,8 @@ cd package
 6. 每次打包时脚本会自动更新加密秘钥，加密范围包括pkl文件和xml文件(world/commons/robots部分的xml不会进行加密)
 
 ## 感谢
-FCPortugal团队 开源的底层，仓库地址:[https://github.com/m-abr/FCPCodebase](https://github.com/m-abr/FCPCodebase)
-
+1. FCPortugal团队 开源的底层，仓库地址:[https://github.com/m-abr/FCPCodebase](https://github.com/m-abr/FCPCodebase)
+2. UTAustinVilla开源3D底层中的`copy_libs.sh`脚本，仓库地址:[https://github.com/LARG/utaustinvilla3d](https://github.com/LARG/utaustinvilla3d)
 # FC Portugal Codebase <br> for RoboCup 3D Soccer Simulation League
 
 ![](https://s5.gifyu.com/images/Siov6.gif)

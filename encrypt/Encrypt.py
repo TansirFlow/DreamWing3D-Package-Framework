@@ -7,7 +7,7 @@ import random
 from datetime import datetime
 
 class Encrypt():
-    KEY="Ux6fEKYPcTzZ9htsdy5PFZcGsTptXXp2cyfIVjmp_zg="
+    KEY="bRja4a_5Xki_UHaj5rjL1UL_wTAsZ2_AiuvOSDfk0bc="
 
     def __init__(self):
         pass
