@@ -1,5 +1,5 @@
 # DreamWing3D-Package-Framework
-> 这是一个用于将基于FCP底层的3D球队代码打包成二进制的框架
+> 这是一个用于将基于FCP底层的3D球队代码打包成二进制的框架，已经融合了南邮Apollo3D开源的神经网络踢球技能
 
 ## 安装依赖
 ```bash
@@ -38,7 +38,8 @@ cd package
 
 ## 感谢
 1. FCPortugal团队 开源的底层，仓库地址:[https://github.com/m-abr/FCPCodebase](https://github.com/m-abr/FCPCodebase)
-2. UTAustinVilla开源3D底层中的`copy_libs.sh`脚本，仓库地址:[https://github.com/LARG/utaustinvilla3d](https://github.com/LARG/utaustinvilla3d)
+2. 南邮Apollo3D开源的神经网络踢球训练框架：[https://github.com/Jiangtianjian/Kick-Train-Env](https://github.com/Jiangtianjian/Kick-Train-Env)
+3. UTAustinVilla开源3D底层中的`copy_libs.sh`脚本，仓库地址:[https://github.com/LARG/utaustinvilla3d](https://github.com/LARG/utaustinvilla3d)
 # FC Portugal Codebase <br> for RoboCup 3D Soccer Simulation League
 
 ![](https://s5.gifyu.com/images/Siov6.gif)
