@@ -3,11 +3,9 @@ import os
 import base64
 import pickle
 import sys
-import random
-from datetime import datetime
 
 class Encrypt():
-    KEY="bRja4a_5Xki_UHaj5rjL1UL_wTAsZ2_AiuvOSDfk0bc="
+    KEY="FH8P9gte9BkWxm_KI7uPuoVH0Jo2YPXhqJ4SKC_y2k0="
 
     def __init__(self):
         pass
@@ -18,11 +16,8 @@ class Encrypt():
 
     @staticmethod
     def generate_fernet_key():
-        # 生成32字节的随机密钥
         key = os.urandom(32)
-        # 将密钥编码为URL安全的Base64格式
         encoded_key = base64.urlsafe_b64encode(key)
-        # 返回解码为utf-8字符串的密钥，方便存储或显示
         return encoded_key.decode('utf-8')
     
     @staticmethod

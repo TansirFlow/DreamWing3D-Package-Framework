@@ -49,7 +49,8 @@ class Behavior():
         from behaviors.custom.Get_Up.Get_Up import Get_Up
         from behaviors.custom.Step.Step import Step
         from behaviors.custom.Walk.Walk import Walk
-        classes = [Basic_Kick,Dribble,Fall,Get_Up,Step,Walk]
+        from behaviors.custom.Kick.Kick import Kick
+        classes = [Basic_Kick,Dribble,Fall,Get_Up,Step,Walk,Kick]
 
         '''---- End of manual declarations ----'''
 

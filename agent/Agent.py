@@ -9,7 +9,7 @@ class Agent(Base_Agent):
                  team_name:str, enable_log, enable_draw, wait_for_server=True, is_fat_proxy=False) -> None:
         
         # define robot type
-        robot_type = (0,1,1,1,2,3,3,3,4,4,4)[unum-1]
+        robot_type = (0,1,1,1,1,3,3,3,4,4,4)[unum-1]
 
         # Initialize base agent
         # Args: Server IP, Agent Port, Monitor Port, Uniform No., Robot Type, Team Name, Enable Log, Enable Draw, play mode correction, Wait for Server, Hear Callback
@@ -115,12 +115,9 @@ class Agent(Base_Agent):
         self.kick_distance = self.kick_distance if kick_distance is None else kick_distance
 
         if self.fat_proxy_cmd is None: # normal behavior
-            return self.behavior.execute("Basic_Kick", self.kick_direction, abort) # Basic_Kick has no kick distance control
+            return self.behavior.execute("Kick", self.kick_direction, abort) # Kick has no kick distance control
         else: # fat proxy behavior
             return self.fat_proxy_kick()
-
-
-
 
     def think_and_send(self):
         w = self.world
