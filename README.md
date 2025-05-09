@@ -1,6 +1,8 @@
 # DreamWing3D-Package-Framework
 > 这是一个用于将基于FCP底层的3D球队代码打包成二进制的框架，已经融合了南邮Apollo3D开源的神经网络踢球技能
 
+好消息！经过我们的观察，已经有**Miracle3D**，**IFI**，**WrightOcean**，**Dionysus_CSOC**，**Action3D**等队伍在2025年中国公开赛中使用了本加密框架，感谢大家的支持
+
 ## 安装依赖
 ```bash
 pip install nuitka
